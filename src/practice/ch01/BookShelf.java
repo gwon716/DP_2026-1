@@ -4,27 +4,30 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class BookShelf implements Iterable<Book> {
-    private List<Book> books;
+// public class BookShelf implements Iterable<Book> {
+public class BookShelf {
+    private Book[] books;   // 배열 선언
+    private int last = 0;   // 책의 마지막 위치
 
-    public BookShelf(int initialsize) {
-        this.books = new ArrayList<>(initialsize);
+    public BookShelf(int maxsize) {
+        this.books = new Book[maxsize]; // 배열 생성
     }
 
-    public Book getBookAt(int index) {
-        return books.get(index);
+    public Book getBookAt(int index) {  // 책을 가져오는 메소드
+        return books[index];
     }
 
-    public void appendBook(Book book) {
-        books.add(book);
+    public void appendBook(Book book) { // 책을 추가하는 메소드
+        this.books[last] = book;
+        last++;
     }
 
-    public int getLength() {
-        return books.size();
+    public int getLength() {    // 책의 개수를 반환하는 메소드
+        return last;
     }
 
-    @Override
-    public Iterator<Book> iterator() {
-        return new BookShelfIterator(this);
-    }
+    // @Override
+    // public Iterator<Book> iterator() {
+    //     return new BookShelfIterator(this);
+    // }
 }

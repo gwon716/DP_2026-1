@@ -1,3 +1,4 @@
+package ch09.A2;
 import java.util.Random;
 
 public class RandomCountDisplay extends CountDisplay {

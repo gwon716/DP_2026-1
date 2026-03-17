@@ -5,15 +5,15 @@ import java.util.NoSuchElementException;
 
 public class BookShelfIterator implements Iterator<Book> {
     private BookShelf bookShelf;
-    private int index;
+    private int index;  // 책꽂이에서 현재 위치를 나타내는 변수
 
     public BookShelfIterator(BookShelf bookShelf) {
         this.bookShelf = bookShelf;
-        this.index = 0;
+        this.index = 0; // 현재 위치 초기화
     }
 
     @Override
-    public boolean hasNext() {
+    public boolean hasNext() {  // 책꽂이에서 꺼내올 다음 책이 있는지 확인하는 메소드
         if (index < bookShelf.getLength()) {
             return true;
         } else {
@@ -22,11 +22,11 @@ public class BookShelfIterator implements Iterator<Book> {
     }
 
     @Override
-    public Book next() {
+    public Book next() {    // 책꽂이에서 다음 책을 꺼내오는 메소드
         if (!hasNext()) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException(); // 더 이상 꺼내올 책이 없을 때 예외 처리
         }
-        Book book = bookShelf.getBookAt(index);
+        Book book = bookShelf.getBookAt(index); // 책꽂이에서 현재 위치의 책을 가져옴
         index++;
         return book;
     }
