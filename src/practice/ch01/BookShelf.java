@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-// public class BookShelf implements Iterable<Book> {
-public class BookShelf {
+public class BookShelf implements Iterable<Book> {
+// public class BookShelf {
     private Book[] books;   // 배열 선언
     private int last = 0;   // 책의 마지막 위치
 
@@ -26,8 +26,8 @@ public class BookShelf {
         return last;
     }
 
-    // @Override
-    // public Iterator<Book> iterator() {
-    //     return new BookShelfIterator(this);
-    // }
+    @Override
+    public Iterator<Book> iterator() {  // 자기 자신(현재 책꽂이)의 Iterator를 생성해서 반환하는 메소드
+        return new BookShelfIterator(this); // this : 현재 객체(책꽂이)를 가리킴
+    }
 }
