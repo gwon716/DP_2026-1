@@ -19,16 +19,23 @@ public class Main {
         bookShelf.appendBook(new Book("로마인 이야기", "역사", 1992, 25000));
         bookShelf.appendBook(new Book("어린왕자", "소설", 1943, 9000));
 
-        Iterator<Book> it = bookShelf.iteratorByGenre("소설");
-        while (it.hasNext()) { 
-        System.out.println(it.next().getName()); 
-        }
-        
-        System.out.println();
+    // 장르별 테스트
+    Iterator<Book> it1 = bookShelf.iteratorByGenre("소설");
+    while (it1.hasNext()) {
+        Book b = it1.next();
+        System.out.println("제목: " + b.getName() + " | 장르: " + b.getGenre() + 
+                           " | 출판: " + b.getYear() + "년 | 가격: " + (int)b.getPrice() + "원");
+    }
 
-        Iterator<Book> it2 = bookShelf.iteratorByYear("소설"); 
-        while (it2.hasNext()) { 
-            System.out.println(it2.next().getName()); 
-        }
+    System.out.println();
+
+    // 출판연도 역순 테스트
+    Iterator<Book> it2 = bookShelf.iteratorByYear("소설"); 
+    while (it2.hasNext()) {
+        Book b = it2.next(); 
+        System.out.println("제목: " + b.getName() + " | 장르: " + b.getGenre() + 
+                           " | 출판: " + b.getYear() + "년 | 가격: " + (int)b.getPrice() + "원");
+    }
+    
     }
 }

@@ -14,12 +14,13 @@ public class YearIterator implements Iterator<Book> {
         
         for (int i = 0; i < bookShelf.getLength(); i++) {
             Book book = bookShelf.getBookAt(i);
-            if (book.getGenre().equals(genre)) {
-                sortedBooks.add(book);
-            }
+            if (genre == null || book.getGenre().equals(genre)) 
+                {
+                    sortedBooks.add(book);
+                }
         }
         sortedBooks.sort((b1, b2) -> b2.getYear() - b1.getYear());
-    }
+        }
 
     @Override
     public boolean hasNext() {
