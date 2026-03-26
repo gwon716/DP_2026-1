@@ -10,7 +10,8 @@ public class KoreanOutletAdapter implements Charger{
 
     @Override
     public int charge() {
-        return koreanOutlet.provide();
+        koreanOutlet.provide();
+        return 220;
     }
     
 }
