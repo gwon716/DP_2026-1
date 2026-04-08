@@ -3,7 +3,14 @@ package hw.ch05;
 public enum LoggerEnum {
     INSTANCE;
 
+    private StringBuilder logBuffer = new StringBuilder();
+
     public void log(String message) {
-        System.out.println("Log: " + message);
+        logBuffer.append("Log: ").append(message).append("\n");
+        System.out.println("[LoggerEnum] " + message);
+    }
+
+    public String getLog() {
+        return logBuffer.toString();
     }
 }
