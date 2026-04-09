@@ -2,6 +2,7 @@ package hw.ch05;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("20221310 이지원");
         System.out.println("========== 방식 1: Static Initializer =========="); 
         LoggerStaticInit logger1a = LoggerStaticInit.getInstance(); 
         LoggerStaticInit logger1b = LoggerStaticInit.getInstance(); 

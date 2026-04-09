@@ -2,6 +2,7 @@ package hw.ch05;
 
 public class Main2 {
     public static void main(String[] args) {
+        System.out.println("20221310 이지원");
         System.out.println("\n========== 방식 2: Synchronized Lazy =========="); 
         LoggerSynchronizedLazy logger2a = LoggerSynchronizedLazy.getInstance(); 
         LoggerSynchronizedLazy logger2b = LoggerSynchronizedLazy.getInstance(); 

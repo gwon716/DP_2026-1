@@ -2,6 +2,7 @@ package hw.ch05;
 
 public class Main3 {
     public static void main(String[] args) {
+        System.out.println("20221310 이지원");
         System.out.println("\n========== 방식 3: Enum (권장) =========="); 
         LoggerEnum logger3a = LoggerEnum.INSTANCE; 
         LoggerEnum logger3b = LoggerEnum.INSTANCE; 
