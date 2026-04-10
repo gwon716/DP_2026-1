@@ -8,7 +8,7 @@ public class Main {
         System.out.println("20221310 이지원");
         
         Manager manager = new Manager();
-        UnderlinePen upen = new UnderlinePen('~');
+        UnderlinePen upen = new UnderlinePen('-');
         MessageBox mbox = new MessageBox('*');
         BorderLine bline = new BorderLine('=');
 
