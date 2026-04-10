@@ -12,12 +12,15 @@ public class BorderLine implements Product {
     @Override
     public void use(String s) {
         int len = s.length();
-        for (int i = 0; i < len + 4; i++) {
+
+        for (int i = 0; i < len; i++) {
             System.out.print(borderChar);
         }
         System.out.println();
-        System.out.println(borderChar + " " + s + " " + borderChar);
-        for (int i = 0; i < len + 4; i++) {
+
+        System.out.println(s);
+
+        for (int i = 0; i < len; i++) {
             System.out.print(borderChar);
         }
         System.out.println();
