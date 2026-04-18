@@ -1,9 +1,9 @@
-package ch10.Sample;
+package hw.ch10;
 
 import java.util.Random;
 
 public class WinningStrategy implements Strategy {
-    private Random random;  // 난수 생성기
+    private Random random;
     private boolean won = false;
     private Hand prevHand;
 
@@ -13,7 +13,7 @@ public class WinningStrategy implements Strategy {
 
     @Override
     public Hand nextHand() {
-        if (!won) { // 이전에 졌으면
+        if (!won) {
             prevHand = Hand.getHand(random.nextInt(3));
         }
         return prevHand;

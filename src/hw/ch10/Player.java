@@ -1,8 +1,8 @@
-package ch10.Sample;
+package hw.ch10;
 
 public class Player {
     private String name;
-    private Strategy strategy;  // 부모 타입 : 
+    private Strategy strategy;
     private int wincount;
     private int losecount;
     private int gamecount;
