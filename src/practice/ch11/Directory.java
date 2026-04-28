@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Directory extends Entry {
     private String name;
-    private List<Entry> directory = new ArrayList<>();  // 자식들을 보관하는 리스트
+    private List<Entry> directory = new ArrayList<>();  // 자식들을 보관하는 리스트; Entry
 
     public Directory(String name) {
         this.name = name;
@@ -20,7 +20,7 @@ public class Directory extends Entry {
     public int getSize() {
         int size = 0;
         for (Entry entry: directory) {
-            size += entry.getSize();
+            size += entry.getSize();    // 재귀적 호출
         }
         return size;
     }
