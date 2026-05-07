@@ -1,7 +1,8 @@
-package ch17.Sample;
+package practice.ch17;
 
 import java.util.Random;
 
+// 관찰 대상
 public class RandomNumberGenerator extends NumberGenerator {
     private Random random = new Random(); 	// 난수 생성기 
     private int number;                   		// 현재 수 
@@ -16,7 +17,7 @@ public class RandomNumberGenerator extends NumberGenerator {
     @Override
     public void execute() {
         for (int i = 0; i < 20; i++) {
-            number = random.nextInt(50);
+            number = random.nextInt(50);    // 0 ~ 49까지 난수 생성
             notifyObservers();
         }
     }

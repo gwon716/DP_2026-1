@@ -1,8 +1,8 @@
-package ch17.Sample;
+package practice.ch17;
 
 public class GraphObserver implements Observer {
     @Override
-    public void update(NumberGenerator generator) {
+    public void update(NumberGenerator generator) { // 통지 받을 때 호출되는 메소드
         System.out.print("GraphObserver:");
         int count = generator.getNumber();
         for (int i = 0; i < count; i++) {
