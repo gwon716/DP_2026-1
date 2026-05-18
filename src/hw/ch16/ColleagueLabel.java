@@ -26,7 +26,6 @@ public class ColleagueLabel extends Label implements Colleague {
             setText("● 로그인 불가");
             setForeground(Color.gray);
         }
-        // setEnabled(enabled);
     }
     
 }
