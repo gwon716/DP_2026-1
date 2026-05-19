@@ -1,7 +1,14 @@
 package hw.ch17;
 
 public class EvenNumberGenerator extends NumberGenerator {
-    private int number;                   		// 현재 수 
+    private int start;
+    private int end;
+    private int number;
+
+    public EvenNumberGenerator(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
 
     // 수를 취득한다 
     @Override
@@ -12,8 +19,8 @@ public class EvenNumberGenerator extends NumberGenerator {
     // 수를 생성한다 
     @Override
     public void execute() {
-        for (int i = 0; i < 20; i += 2) {
-            number += 2;
+        for (int i = start; i <= end; i += 2) {
+            number = i;
             notifyObservers();
         }
     }

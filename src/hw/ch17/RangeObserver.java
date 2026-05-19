@@ -6,11 +6,11 @@ public class RangeObserver implements Observer {
         int number = generator.getNumber();
         
         if (number < 10) {
-            System.out.println("RangeObserver: [Low]" + number);
+            System.out.println("RangeObserver: [Low] " + number);
         } else if (number < 20) {
-            System.out.println("RangeObserver: [Mid]" + number);
+            System.out.println("RangeObserver: [Mid] " + number);
         } else if (number >= 20) {
-            System.out.println("RangeObserver: [High]" + number);
+            System.out.println("RangeObserver: [High] " + number);
         }
     }
     
