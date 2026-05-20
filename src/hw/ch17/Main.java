@@ -2,6 +2,7 @@ package hw.ch17;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("20221310 이지원");
         NumberGenerator generator = new EvenNumberGenerator(0, 30);
         Observer observer1 = new DigitObserver();
         Observer observer2 = new GraphObserver();
