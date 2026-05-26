@@ -1,7 +1,7 @@
-package ch22.Sample;
+package practice.ch22;
 
-import ch22.Sample.command.*;
-import ch22.Sample.drawer.*;
+import practice.ch22.command.*;
+import practice.ch22.drawer.*;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -22,8 +22,8 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         this.addWindowListener(this);
         canvas.addMouseMotionListener(this);
         clearButton.addActionListener(e -> {
-            history.clear();    // 이력 전체 삭제
-            canvas.repaint();   // 캔버스 전체 다시 그리기
+            history.clear();
+            canvas.repaint();
         });
 
         Box buttonBox = new Box(BoxLayout.X_AXIS);
