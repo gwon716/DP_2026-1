@@ -9,7 +9,7 @@ public class BigChar {
     private char charname;
     // 큰 문자를 표현하는 문자열('#' '.' '\n'으로 이루어진 열)
     private String fontdata;
-    static final String RESET   = "[0m"; 
+    static final String RESET   = "\u001B[0m"; 
 
     // 생성자 
     public BigChar(char charname) {
