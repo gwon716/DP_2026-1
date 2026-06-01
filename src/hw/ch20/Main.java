@@ -11,6 +11,7 @@ public class Main {
     static final String RESET   = "\u001B[0m"; 
 
     public static void main(String[] args) {
+        System.out.println("20221310 이지원");
         if (args.length == 0) {
             System.out.println("Usage: java Main digits");
             System.out.println("Example: java Main 1212123");
