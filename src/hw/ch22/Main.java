@@ -67,7 +67,7 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
         buttonBox.add(blueButton);
         buttonBox.add(undoButton);
         buttonBox.add(redoButton);
-        
+
         Box mainBox = new Box(BoxLayout.Y_AXIS);
         mainBox.add(buttonBox);
         mainBox.add(canvas);
@@ -103,5 +103,6 @@ public class Main extends JFrame implements MouseMotionListener, WindowListener 
 
     public static void main(String[] args) {
         new Main("Command Pattern Sample");
+        System.out.println("20221310 이지원");
     }
 }
